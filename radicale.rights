@@ -1,0 +1,19 @@
+[infcloud]
+user: .*
+collection: /
+permission: r
+
+[owner]
+user: owner
+collection: ^owner(/.+)?$
+permission: rw
+
+[readonly]
+user: readonly
+collection: ^owner(/.+)?$
+permission: r
+
+[readwrite]
+user: readwrite
+collection: ^owner(/.+)?$
+permission: rw

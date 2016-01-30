@@ -1,0 +1,7 @@
+.idea
+.sandstorm/.vagrant
+env
+caldavzap
+carddavmate
+*nginx.conf*
+*.zip
