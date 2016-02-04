@@ -45,10 +45,10 @@ const pkgdef :Spk.PackageDefinition = (
     metadata = (
       icons = (
         # Various icons to represent the app in various contexts.
-        appGrid = (png = (dpi1x = embed "logo.png")),
-        #grain = (svg = embed "path/to/grain-24x24.svg"),
-        #market = (svg = embed "path/to/market-150x150.svg"),
-        #marketBig = (svg = embed "path/to/market-big-300x300.svg"),
+        appGrid = (svg = embed "logo.svg"),
+        grain = (svg = embed "logo.svg"),
+        market = (svg = embed "logo.svg"),
+        marketBig = (svg = embed "logo.svg"),
       ),
 
       website = "http://radicale.org",
