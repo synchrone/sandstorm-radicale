@@ -93,6 +93,7 @@ opt/app/caldavzap/config.js
 opt/app/caldavzap/css/default.css
 opt/app/caldavzap/css/default_integration.css
 opt/app/caldavzap/css/fullcalendar.css
+opt/app/caldavzap/css/hideresources.css
 opt/app/caldavzap/css/jquery-ui.custom.css
 opt/app/caldavzap/css/spectrum.custom.css
 opt/app/caldavzap/data_process.js
@@ -241,6 +242,7 @@ opt/app/carddavmate/common.js
 opt/app/carddavmate/config.js
 opt/app/carddavmate/css/default.css
 opt/app/carddavmate/css/default_ie.css
+opt/app/carddavmate/css/hideresources.css
 opt/app/carddavmate/css/jquery-ui.custom.css
 opt/app/carddavmate/css/jquery.tagsinput.css
 opt/app/carddavmate/css/spectrum.custom.css

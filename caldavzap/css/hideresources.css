@@ -1,0 +1,11 @@
+/** Hiding the CalDAV resources, since we only have one per grain **/
+#resourceCalDAV_h, #ResourceCalDAVList, #timezoneWrapper {
+    width: 0px;
+}
+#CalendarLoader {
+    left: 50px;
+}
+#main_h, #searchForm, #main {
+    left: 49px;
+}
+
