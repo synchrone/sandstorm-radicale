@@ -52,7 +52,7 @@ const pkgdef :Spk.PackageDefinition = (
       ),
 
       website = "http://radicale.org",
-      codeUrl = "https://github.com/Kozea/Radicale",
+      codeUrl = "https://github.com/synchrone/sandstorm-radicale",
       license = (openSource = gpl3),
       categories = [productivity],
 
