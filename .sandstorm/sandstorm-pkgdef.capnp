@@ -59,7 +59,7 @@ const pkgdef :Spk.PackageDefinition = (
       author = (
         contactEmail = "syn+sandstorm-radicale@syn.im",
 
-        #pgpSignature = embed "pgp-signature",
+        pgpSignature = embed "pgp-signature",
         # PGP signature attesting responsibility for the app ID. This is a binary-format detached
         # signature of the following ASCII message (not including the quotes, no newlines, and
         # replacing <app-id> with the standard base-32 text format of the app's ID):
@@ -76,7 +76,7 @@ const pkgdef :Spk.PackageDefinition = (
         upstreamAuthor = "Kozea",
       ),
 
-      #pgpKeyring = embed "path/to/pgp-keyring",
+      pgpKeyring = embed "pgp-keyring",
       # A keyring in GPG keyring format containing all public keys needed to verify PGP signatures in
       # this manifest (as of this writing, there is only one: `author.pgpSignature`).
       #
