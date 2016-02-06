@@ -1,0 +1,26 @@
+#intSync {
+    display: block;
+    background: url(../images/cdz_logo.svg) no-repeat center;
+    background-size: 36px 36px;
+}
+
+.sandstorm-offer {
+    z-index: 26; /** higher than inf-it system **/
+}
+.sandstorm-offer .ui-icon{
+    height: 0px; /** No css for jQuery Dialog plugin, so won't show icons **/
+}
+.sandstorm-offer .ui-dialog-titlebar-close{
+    margin: 5px 0px;
+}
+
+.sandstorm-offer .ui-dialog-content{
+    padding: 0px 15px;
+}
+
+.sandstorm-offer iframe {
+    height: 32px;
+    width: 100%;
+    frameborder: 0;
+    border 1px solid #c0c0c0;
+}

@@ -87,7 +87,7 @@ const pkgdef :Spk.PackageDefinition = (
       # Where `<key-id>` is a PGP key ID or email address associated with the key.
 
       description = (defaultText = embed "description.md"),
-      shortDescription = (defaultText = "Calendars and Contacts server app"),
+      shortDescription = (defaultText = "Calendars and Contacts"),
       screenshots = [
         (width = 1920, height = 1080, jpeg = embed "screenshot.png"),
       ],

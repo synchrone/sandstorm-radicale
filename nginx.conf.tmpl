@@ -16,13 +16,10 @@ http {
 	types_hash_max_size 2048;
 	include /etc/nginx/mime.types;
 	default_type application/octet-stream;
-	ssl_protocols TLSv1 TLSv1.1 TLSv1.2; # Dropping SSLv3, ref: POODLE
-	ssl_prefer_server_ciphers on;
 
-	access_log off;
-	error_log stderr;
-	gzip on;
-	gzip_disable "msie6";
+	access_log off; #/dev/stderr;
+	error_log stderr; # debug;
+	gzip off;
 
     server {
         listen 8000 default_server;
@@ -40,6 +37,11 @@ http {
             include /etc/nginx/uwsgi_params;
             uwsgi_param REMOTE_USER $user;
             uwsgi_param HTTP_AUTHORIZATION '';
+        }
+
+        location /api-offer {
+            port_in_redirect off;
+            root /opt/app;
         }
     }
 }

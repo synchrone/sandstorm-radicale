@@ -84,6 +84,10 @@ lib/x86_64-linux-gnu/libz.so.1.2.8
 lib64/ld-linux-x86-64.so.2
 opt/app/.sandstorm/launcher.sh
 opt/app/.sandstorm/new-instance.sh
+opt/app/api-offer
+opt/app/api-offer/inf-it-integration.css
+opt/app/api-offer/inf-it-integration.js
+opt/app/api-offer/jquery-ui-dialog-only.js
 opt/app/caldav.config.js
 opt/app/caldav.nginx.conf
 opt/app/caldavzap/cache.manifest
