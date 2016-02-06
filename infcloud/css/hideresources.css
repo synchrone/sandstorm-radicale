@@ -9,3 +9,10 @@
     left: 49px;
 }
 
+/** CardDAV **/
+.resourcesCardDAV_d, #ResourceCardDAVList, #ResourceCardDAVListOverlay {
+    width: 0px;
+}
+.collection_d, #SearchBox, #ABList, #ABListOverlay, #AddressbookOverlay {
+    left: 50px;
+}
