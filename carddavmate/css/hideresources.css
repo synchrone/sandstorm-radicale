@@ -1,8 +1,0 @@
-/** Hiding the CardDAV resources, since we only have one per grain **/
-.resourcesCardDAV_d, #ResourceCardDAVList, #ResourceCardDAVListOverlay {
-    width: 0px;
-}
-
-.collection_d, #SearchBox, #ABList, #ABListOverlay, #AddressbookOverlay {
-    left: 0px; /** it's not integrated, so left: 50px is not required **/
-}

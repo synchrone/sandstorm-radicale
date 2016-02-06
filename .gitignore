@@ -1,8 +1,7 @@
 .idea
 .sandstorm/.vagrant
 env
-caldavzap
-carddavmate
+infcloud
 *nginx.conf*
 *.zip
 *.spk

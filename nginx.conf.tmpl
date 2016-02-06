@@ -27,7 +27,13 @@ http {
         client_max_body_size 0;
 
         server_name localhost;
-        root /opt/app/_subapp_;
+        root /opt/app/infcloud;
+
+        location = /config.js {
+            root /opt/app;
+            rewrite ^ /_subapp_.config.js break;
+            break;
+        }
 
         location /radicale {
             if ($http_x_sandstorm_permissions ~* (readonly|readwrite)) { set $user $1; }

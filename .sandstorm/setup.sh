@@ -15,12 +15,6 @@ mkdir -p /var/log/radicale
 ln -sf /opt/app/radicale.config /etc/radicale/config
 ln -sf /opt/app/radicale.rights /etc/radicale/rights
 
-echo "Downloading and configuring CardDavMATE"
-curl -s https://www.inf-it.com/CardDavMATE_$INF_IT_VER.zip > /opt/app/carddavmate.zip
-unzip -q -n /opt/app/carddavmate.zip -d /opt/app
-ln -sf /opt/app/carddav.config.js /opt/app/carddavmate/config.js
-
-echo "Downloading and configuring CalDavZAP..."
-curl -s https://www.inf-it.com/CalDavZAP_$INF_IT_VER.zip > /opt/app/caldavzap.zip
-unzip -q -n /opt/app/caldavzap.zip -d /opt/app
-ln -sf /opt/app/caldav.config.js /opt/app/caldavzap/config.js
+echo "Downloading and configuring InfCloud"
+curl -s https://www.inf-it.com/InfCloud_$INF_IT_VER.zip > /opt/app/infcloud.zip
+unzip -q -n /opt/app/infcloud.zip -d /opt/app
