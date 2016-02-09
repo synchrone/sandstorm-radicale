@@ -8,7 +8,7 @@
 #main_h, #searchForm, #main, #main_h_TODO, #searchFormTODO, #mainTODO {
     left: 49px;
 }
-#calendarLine {
+#calendarLine, #calendarLineTODO {
     display: none;
 }
 
