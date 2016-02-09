@@ -35,6 +35,11 @@ http {
             break;
         }
 
+        location /api-offer/ {
+            root /opt/app;
+        }
+
+        # radicale setup
         location /radicale {
             if ($http_x_sandstorm_permissions ~* (readonly|readwrite)) { set $user $1; }
             if ($http_x_sandstorm_user_id != '') { set $user 'owner'; }
@@ -44,10 +49,14 @@ http {
             uwsgi_param REMOTE_USER $user;
             uwsgi_param HTTP_AUTHORIZATION '';
         }
-
-        location /api-offer {
-            port_in_redirect off;
-            root /opt/app;
+        #dav discovery as per RFC6764
+        location ~ ^/.well-known/(caldav|carddav)$ {
+            set $req_resource $1;
+            set $resource 'calendar.ics';
+            if ($req_resource = 'carddav'){
+                set $resource 'addressbook.vcf';
+            }
+            return 302 $http_x_sandstorm_base_path/radicale/owner/;
         }
     }
 }

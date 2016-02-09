@@ -1,11 +1,12 @@
 $(function(){
     var rpcId = "0";
-    var subpath = $('<a>').attr('href', globalAccountSettings[0].href)[0].pathname.replace('/radicale','');
+    var petname = "CalDAV\\CardDAV Sync";
+    var subpath = $('<a>').attr('href', globalAccountSettings[0].href)[0].pathname;
     var content = document.location.protocol+"//owner:$API_TOKEN@$API_HOST"+subpath;
 
     var btn = $('<div id="intSync" title="Sync"/>');
         btn.click(function(){
-            window.parent.postMessage({renderTemplate: {rpcId: rpcId, template: content}}, "*");
+            window.parent.postMessage({renderTemplate: {rpcId: rpcId, template: content, petname}}, "*");
         });
 
         btn.appendTo('.integration_d');
@@ -16,7 +17,7 @@ $(function(){
           console.log("ERROR: " + event.data.error);
         } else {
 
-            var dlg = $('<div><p>For CalDAV\\CardDAV syncing please use this URL:</p><p/><iframe frameborder="0" allowtransparency="true" /></div>');
+            var dlg = $('<div><p>For'+petname+' please use this URL:</p><p/><iframe frameborder="0" allowtransparency="true" /></div>');
             dlg.find('iframe').attr("src", event.data.uri);
 
             dlg.dialog({

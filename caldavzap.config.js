@@ -63,3 +63,6 @@ var globalIgnoreCompletedOrCancelledAlarms=true;
 var globalMozillaSupport=false;
 var globalWeekendDays=[0, 6];
 var globalAppleRemindersMode=true;
+
+//from carddav:
+var globalContactDataMinVisiblePercentage=0.95;

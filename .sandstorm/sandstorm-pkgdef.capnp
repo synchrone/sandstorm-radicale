@@ -153,7 +153,7 @@ const pkgdef :Spk.PackageDefinition = (
         ),
       ],
     ),
-    apiPath = "/radicale/",
+    apiPath = "/",
   ),
 );
 
