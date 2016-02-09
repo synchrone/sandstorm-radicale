@@ -16,7 +16,7 @@ UWSGI_SOCKET_FILE=/var/run/uwsgi.sock
 # Spawn uwsgi
 HOME=/var uwsgi \
         --socket $UWSGI_SOCKET_FILE \
-        --plugin python \
+        --plugin python3 \
         --virtualenv /opt/app/env \
         --wsgi-file /opt/app/main.py &
 
