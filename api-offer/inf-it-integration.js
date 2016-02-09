@@ -17,12 +17,12 @@ $(function(){
           console.log("ERROR: " + event.data.error);
         } else {
 
-            var dlg = $('<div><p>For'+petname+' please use this URL:</p><p/><iframe frameborder="0" allowtransparency="true" /></div>');
+            var dlg = $('<div><p>For '+petname+' please use this URL:</p><p/><iframe frameborder="0" allowtransparency="true" seamless /></div>');
             dlg.find('iframe').attr("src", event.data.uri);
 
             dlg.dialog({
                 modal: true,
-                width: 700,
+                width: "50%",
                 dialogClass: 'sandstorm-offer'
             });
         }
