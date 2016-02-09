@@ -21,7 +21,6 @@ $(function(){
             dlg.find('iframe').attr("src", event.data.uri);
 
             dlg.dialog({
-                modal: true,
                 width: "50%",
                 dialogClass: 'sandstorm-offer'
             });

@@ -8,6 +8,9 @@
 #main_h, #searchForm, #main, #main_h_TODO, #searchFormTODO, #mainTODO {
     left: 49px;
 }
+#calendarLine {
+    display: none;
+}
 
 /** CardDAV **/
 .resourcesCardDAV_d, #ResourceCardDAVList, #ResourceCardDAVListOverlay {
