@@ -1,5 +1,4 @@
 radicale
 webassets
-PyYAML
 jsmin
 cssmin
