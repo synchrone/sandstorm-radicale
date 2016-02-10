@@ -2,7 +2,7 @@
 * http://jqueryui.com
 * Includes: button.js, dialog.js
 * Copyright jQuery Foundation and other contributors; Licensed MIT */
-(function( factory ) {
+;(function( factory ) {
 	if ( typeof define === "function" && define.amd ) {
 
 		// AMD. Register as an anonymous module.

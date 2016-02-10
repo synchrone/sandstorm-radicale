@@ -14,3 +14,5 @@ fi
 #rebuilding nginx config for dev
 sed --expression 's/_subapp_/caldavzap/' /opt/app/nginx.conf.tmpl > /opt/app/caldav.nginx.conf;
 sed --expression 's/_subapp_/carddavmate/' /opt/app/nginx.conf.tmpl > /opt/app/carddav.nginx.conf;
+
+cd /opt/app/ && $VENV/bin/python assets.py build
