@@ -19,3 +19,6 @@
 .collection_d, #SearchBox, #ABList, #ABListOverlay, #AddressbookOverlay {
     left: 50px;
 }
+#vCardEditor tr[data-type="DEST"] {
+    display: none;
+}
