@@ -15,7 +15,7 @@ log = logging.getLogger('webassets')
 log.addHandler(logging.StreamHandler())
 log.setLevel(logging.__dict__[args.loglevel])
 
-loader = PythonLoader('infcloud.webassets')
+loader = PythonLoader('webassets_config')
 assets_env = loader.load_environment()
 assets_env.debug = args.debug
 
