@@ -30,7 +30,6 @@ http {
         root /opt/app/infcloud;
 
         location = /config.js {
-            root /opt/app;
             rewrite ^ /_subapp_.config.js break;
             break;
         }

@@ -93,9 +93,7 @@ opt/app/api-offer/inf-it-integration.css
 opt/app/api-offer/inf-it-integration.js
 opt/app/api-offer/jquery-ui-dialog-only.js
 opt/app/caldav.nginx.conf
-opt/app/caldavzap.config.js
 opt/app/carddav.nginx.conf
-opt/app/carddavmate.config.js
 opt/app/env/bin/python
 opt/app/env/lib/python2.7/UserDict.py
 opt/app/env/lib/python2.7/UserDict.pyc
@@ -239,6 +237,8 @@ opt/app/env/local/lib
 opt/app/infcloud/addressbook.js
 opt/app/infcloud/cache.manifest
 opt/app/infcloud/cache_handler.js
+opt/app/infcloud/caldavzap.config.js
+opt/app/infcloud/carddavmate.config.js
 opt/app/infcloud/common.js
 opt/app/infcloud/compressed.css
 opt/app/infcloud/compressed.js
