@@ -1,6 +1,6 @@
 $(function(){
     var rpcId = "0";
-    var petname = "CalDAV\\CardDAV Sync";
+    var petname = "CalDAV/CardDAV Sync";
     var subpath = $('<a>').attr('href', globalAccountSettings[0].href)[0].pathname;
     var content = document.location.protocol+"//owner:$API_TOKEN@$API_HOST"+subpath;
 
