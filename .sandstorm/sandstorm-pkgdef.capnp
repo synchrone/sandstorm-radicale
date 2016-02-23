@@ -89,7 +89,9 @@ const pkgdef :Spk.PackageDefinition = (
       description = (defaultText = embed "description.md"),
       shortDescription = (defaultText = "Calendars and Contacts"),
       screenshots = [
-        (width = 1920, height = 1080, jpeg = embed "screenshot.png"),
+        (width = 1137, height = 717, jpeg = embed "screenshot-caldav-edit.png"),
+        (width = 1139, height = 717, jpeg = embed "screenshot-caldav-sync.png"),
+        (width = 1139, height = 717, jpeg = embed "screenshot-carddav.png"),
       ],
       changeLog = (defaultText = embed "changelog.md"),
     ),

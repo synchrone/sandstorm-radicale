@@ -19,3 +19,8 @@
 # v4
 * Fixing python virtualenv issue
 * Hiding resource selection in CardDAV as well
+
+# v5
+* Better UI for synchronization
+* Refresh button enabled
+* Web auto-refresh interval set to 30s for calendars and 60s for contacts
