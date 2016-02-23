@@ -273,7 +273,7 @@ var globalAccountSettings=[
         backgroundCalendars: []
     }
 ];
-
+var globalEnabledApps = ['CardDavMATE'];
 // globalNetworkCheckSettings
 // Use this option if you want to use standard login screen without
 // hardcoded username/password in config.js (used by globalAccountSettings).

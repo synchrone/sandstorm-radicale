@@ -14,6 +14,7 @@ var globalAccountSettings=[
         backgroundCalendars: []
     }
 ];
+var globalEnabledApps = ['CalDavZAP', 'CalDavTODO'];
 var globalBackgroundSync=true;
 var globalSyncResourcesInterval=30000;
 var globalEnableRefresh=true;
