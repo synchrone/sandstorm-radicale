@@ -15,8 +15,8 @@ var globalAccountSettings=[
     }
 ];
 var globalBackgroundSync=true;
-var globalSyncResourcesInterval=120000;
-var globalEnableRefresh=false;
+var globalSyncResourcesInterval=30000;
+var globalEnableRefresh=true;
 var globalEnableKbNavigation=true;
 var globalInterfaceLanguage='en_US';
 var globalInterfaceCustomLanguages=[];
@@ -37,7 +37,7 @@ var globalResourceAlphabetSorting=true;
 var globalNewVersionNotifyUsers=null;
 var globalDatepickerFirstDayOfWeek=1;
 var globalHideInfoMessageAfter=1800;
-var globalEditorFadeAnimation=666;
+var globalEditorFadeAnimation=300;
 var globalEventStartPastLimit=3;
 var globalEventStartFutureLimit=3;
 var globalTodoPastLimit=1;

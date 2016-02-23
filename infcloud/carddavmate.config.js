@@ -354,7 +354,7 @@ var globalBackgroundSync=true;
 // This option defines how often (in miliseconds) are resources/collections
 // asynchronously synchronized.
 // Example:
-var globalSyncResourcesInterval=120000;
+var globalSyncResourcesInterval=60000;
 
 
 // globalEnableRefresh
@@ -366,7 +366,7 @@ var globalSyncResourcesInterval=120000;
 // If undefined or false, the synchronization button is disabled.
 // NOTE: enable this option only if you really know what are you doing!
 // Example:
-var globalEnableRefresh=false;
+var globalEnableRefresh=true;
 
 
 // globalEnableKbNavigation
@@ -504,7 +504,7 @@ var globalHideInfoMessageAfter=1800;
 // Set the editor fade in/out animation duration when editing or saving data
 // (in miliseconds).
 // Example:
-var globalEditorFadeAnimation=666;
+var globalEditorFadeAnimation=300;
 
 
 
