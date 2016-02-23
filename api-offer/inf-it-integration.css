@@ -17,6 +17,11 @@
 .sandstorm-offer .ui-dialog-content{
     padding: 0px 15px;
 }
+.sandstorm-offer .iframish{
+    color: #000;
+    font-size: medium;
+    font-family: monospace;
+}
 
 .sandstorm-offer iframe {
     height: 32px;
