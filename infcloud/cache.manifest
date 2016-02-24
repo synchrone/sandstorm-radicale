@@ -1,29 +1,9 @@
 CACHE MANIFEST
-#V 20150922153011
+#V 20160210004437
 
 CACHE:
-addressbook.js
-common.js
-config.js
-data_process.js
-forms.js
-interface.js
-localization.js
-main.js
-resource.js
-timezones.js
-vcalendar.js
-vcalendar_rfc_regex.js
-vcard_rfc_regex.js
-vtodo.js
-webdav_protocol.js
-css/default.css
-css/default_ie.css
-css/default_integration.css
-css/fullcalendar.css
-css/jquery.tagsinput.css
-css/jquery-ui.custom.css
-css/spectrum.custom.css
+compressed.js
+compressed.css
 fonts/Roboto-BoldItalic-webfont.eot
 fonts/Roboto-BoldItalic-webfont.svg
 fonts/Roboto-BoldItalic-webfont.ttf
@@ -150,18 +130,6 @@ images/success_rw.svg
 images/success_w.svg
 images/todoB.svg
 images/user.svg
-lib/fullcalendar.js
-lib/ie_base64.js
-lib/jquery-2.1.4.min.js
-lib/jquery.autosize.js
-lib/jquery.browser.js
-lib/jquery.placeholder-1.1.9.js
-lib/jquery.quicksearch.js
-lib/jquery.tagsinput.js
-lib/jquery-ui-1.11.4.custom.js
-lib/jshash-2.2_sha256.js
-lib/rrule.js
-lib/spectrum.js
 
 NETWORK:
 *
