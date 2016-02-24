@@ -747,7 +747,7 @@ function run()
 		}
 	}
 
-	if(typeof globalAvailableAppsArray!='undefined' && globalAvailableAppsArray!=null && globalAvailableAppsArray.length>1) {
+	if(typeof globalAvailableAppsArray!='undefined' && globalAvailableAppsArray!=null && (globalAvailableAppsArray.length>1 || globalEnableRefresh)) {
 		// show integration banner
 		$('.integration_d').css('display', 'block');
 
