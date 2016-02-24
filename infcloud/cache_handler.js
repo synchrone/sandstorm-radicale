@@ -48,7 +48,7 @@ window.addEventListener('load', function(e)
 		if(!isUserLogged)
 			window.location.reload();
 		else
-			$('#cacheDialog').css('display','none');
+			$('#cacheDialog').css('display','block');
 	}, false);
 
 	window.applicationCache.addEventListener('updateready', function(e)
@@ -56,7 +56,7 @@ window.addEventListener('load', function(e)
 		if(!isUserLogged)
 			window.location.reload();
 		else
-			$('#cacheDialog').css('display','none');
+			$('#cacheDialog').css('display','block');
 	}, false);
 
 	window.applicationCache.addEventListener('obsolete', function(e)
@@ -64,7 +64,7 @@ window.addEventListener('load', function(e)
 		if(!isUserLogged)
 			window.location.reload();
 		else
-			$('#cacheDialog').css('display','none');
+			$('#cacheDialog').css('display','block');
 	}, false);
 
 	window.applicationCache.addEventListener('noupdate', function(e)
@@ -73,7 +73,7 @@ window.addEventListener('load', function(e)
 		{
 			clearInterval(globalCacheUpdateInterval);
 			globalCacheUpdateInterval=setInterval(function(){window.applicationCache.update();}, 300000);
-			//$('#LoginPage .window').css('display', 'inline-none');
+			//$('#LoginPage .window').css('display', 'inline-block');
 		}
 	}, false);
 }, false);
