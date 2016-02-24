@@ -24,3 +24,10 @@
 * Better UI for synchronization
 * Refresh button enabled
 * Web auto-refresh interval set to 30s for calendars and 60s for contacts
+
+# v6
+* Fixing refresh button not working bug
+
+# v7
+* Fixing [issue #7](https://github.com/synchrone/sandstorm-radicale/issues/7)
+* Asset auto-referencing from index.html
