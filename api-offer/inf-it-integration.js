@@ -33,12 +33,17 @@ $(function(){
 
     var btn = $('<div id="intSync" title="Sync"/>');
     btn.click(function(){
-        window.parent.postMessage({renderTemplate: {rpcId: 'iframe.password', template: "$API_TOKEN", petname}}, "*");
-
-
+        //separately requesting password to render in a separate iframe
+        window.parent.postMessage({renderTemplate: {rpcId: 'iframe.password', template: "$API_TOKEN", petname: petname}}, "*");
+        //and the sync URL
         window.parent.postMessage({renderTemplate: {
             rpcId: 'iframe.url',
             template: document.location.protocol+"//$API_HOST"+subpath,
+            static: {
+                // iOS does unauthenticated requests to api endpoint during settings dialog credential check (?!)
+                // so we stub an anonymous response here with hardcoded DAV headers as per RFC4791, Section 5.1
+                options: {dav: ["1", "2", "3", "calendar-access", "addressbook", "extended-mkcol"]}
+            },
             petname: petname
         }}, "*");
     });
