@@ -33,24 +33,36 @@ $(function(){
 
     var btn = $('<div id="intSync" title="Sync"/>');
     btn.click(function(){
-        //separately requesting password to render in a separate iframe
-        window.parent.postMessage({renderTemplate: {rpcId: 'iframe.password', template: "$API_TOKEN", petname: petname}}, "*");
-        //and the sync URL
-        window.parent.postMessage({renderTemplate: {
-            rpcId: 'iframe.url',
-            template: document.location.protocol+"//$API_HOST"+subpath,
-            static: {
-                // iOS does unauthenticated requests to api endpoint during settings dialog credential check (?!)
-                // so we stub an anonymous response here with hardcoded DAV headers as per RFC4791, Section 5.1
-                options: {dav: ["1", "2", "3", "calendar-access", "addressbook", "extended-mkcol"]}
-            },
+        // It's important commonParams is the same for both postMessage calls.
+        // Sandstorm can generate different tokens for mismatching requests, and
+        // api-hash subdomain in iframe.url will not be corresponding to iframe.password
+        var commonParams = {
+            // iOS does unauthenticated requests to api endpoint during settings dialog credential check (?!)
+            // so we stub an anonymous response here with hardcoded DAV headers as per RFC4791, Section 5.1
+            unauthenticated: {options: {dav: ["1", "2", "3", "calendar-access", "addressbook", "extended-mkcol"]}},
             petname: petname
-        }}, "*");
+        };
+
+        //separately requesting password to render in a separate iframe
+        window.parent.postMessage({
+            renderTemplate: $.extend(commonParams, {
+                rpcId: 'iframe.password',
+                template: "$API_TOKEN"
+            })
+        }, "*");
+
+        //and the sync URL
+        window.parent.postMessage({
+            renderTemplate: $.extend(commonParams, {
+                rpcId: 'iframe.url',
+                template: document.location.protocol+"//$API_HOST"+subpath
+            })
+        }, "*");
     });
     btn.appendTo('.integration_d');
 });
 
-//disable Backspace naviate back, which behaves poorly inside Sandstorm's iframe
+//disable Backspace navigate back, which behaves poorly inside Sandstorm's iframe
 $(function(){
     /*
      * this swallows backspace keys on any non-input element.
