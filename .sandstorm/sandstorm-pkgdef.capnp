@@ -19,9 +19,9 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "Radicale"),
 
-    appVersion = 7,  # Increment this for every release.
+    appVersion = 8,  # Increment this for every release.
 
-    appMarketingVersion = (defaultText = "1.1.1+v7"),
+    appMarketingVersion = (defaultText = "1.1.1+v8"),
     # Human-readable representation of appVersion. Should match the way you
     # identify versions of your app in documentation and marketing.
 
@@ -158,8 +158,7 @@ const pkgdef :Spk.PackageDefinition = (
           description = (defaultText = "editors can write"),
         ),
       ],
-    ),
-    apiPath = "/",
+    )
   ),
 );
 

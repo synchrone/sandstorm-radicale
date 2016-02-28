@@ -1,15 +1,12 @@
 # v1
-
 * Initial packaging.
 * Supports sharing.
 * Does not support DAV access for all clients due to Sandstorm's limitations for HTTP Basic auth (see https://github.com/synchrone/sandstorm-radicale/issues/3)
 
 # v2
-
 * Initial CalDAV\CardDAV UI
 
 # v3
-
 * Resource pipelining, performance boost
 * CalDAV API now actually works
 * Switched to Python 3
@@ -31,3 +28,7 @@
 # v7
 * Fixing [issue #7](https://github.com/synchrone/sandstorm-radicale/issues/7)
 * Asset auto-referencing from index.html
+
+# v8
+* Fixed .well-known support
+* Fixed an unauthenticated setup check support (issue #8)
