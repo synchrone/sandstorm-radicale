@@ -49,13 +49,8 @@ http {
             uwsgi_param HTTP_AUTHORIZATION '';
         }
         #dav discovery as per RFC6764
-        location ~ ^/.well-known/(caldav|carddav)$ {
-            set $req_resource $1;
-            set $resource 'calendar.ics';
-            if ($req_resource = 'carddav'){
-                set $resource 'addressbook.vcf';
-            }
-            return 302 $http_x_sandstorm_base_path/radicale/owner/;
+        location ~ ^/.well-known/(caldav|carddav) {
+            rewrite ^ /radicale$request_uri last;
         }
     }
 }
