@@ -52,7 +52,7 @@ var globalTodoListFilterSelected=['filterAction', 'filterProgress'];
 var globalCalendarStartOfBusiness=8;
 var globalCalendarEndOfBusiness=17;
 var globalDefaultEventDuration=120;
-
+var globalAMPMFormat=false;
 var globalDisplayHiddenEvents=false;
 var globalTimeZoneSupport=true;
 var globalTimeZone=Intl.DateTimeFormat().resolvedOptions().timeZone
