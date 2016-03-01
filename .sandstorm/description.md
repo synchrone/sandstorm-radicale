@@ -1,3 +1,5 @@
+**A calendars and contacts application, which syncs with all your devices using a standard protocol.**
+
 ## This App
 This is a combination of Calendar and Contacts management [GUI applications](https://www.inf-it.com/open-source/clients/infcloud/) and a [server](http://radicale.org/), wrapped together for bundling as a Sandstorm.io app.
 
