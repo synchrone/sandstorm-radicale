@@ -34,10 +34,6 @@ http {
             break;
         }
 
-        location /api-offer/ {
-            root /opt/app;
-        }
-
         # radicale setup
         location /radicale {
             if ($http_x_sandstorm_permissions ~* (readonly|readwrite)) { set $user $1; }

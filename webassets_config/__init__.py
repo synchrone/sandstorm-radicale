@@ -12,6 +12,7 @@ environment.register('js', Bundle(
     'lib/jquery.tagsinput.js',
     'lib/spectrum.js',
     'lib/fullcalendar.js',
+    'lib/jquery-ui-dialog-only.js',
     'common.js',
     'webdav_protocol.js',
     'localization.js',
@@ -27,8 +28,7 @@ environment.register('js', Bundle(
     'main.js',
     'forms.js',
     'timezones.js',
-    '../api-offer/jquery-ui-dialog-only.js',
-    '../api-offer/inf-it-integration.js',
+    'sandstorm-integration.js',
     filters='jsmin', output='compressed.js'
 ))
 
@@ -40,6 +40,6 @@ environment.register('css', Bundle(
     'css/fullcalendar.css',
     'css/default_integration.css',
     'css/hideresources.css',
-    '../api-offer/inf-it-integration.css',
+    'css/sandstorm-integration.css',
     filters='cssmin', output='compressed.css'
 ))
