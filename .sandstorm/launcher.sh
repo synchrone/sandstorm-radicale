@@ -18,6 +18,7 @@ HOME=/var uwsgi \
         --socket $UWSGI_SOCKET_FILE \
         --plugin python3 \
         --virtualenv /opt/app/env \
+        --pythonpath /opt/app \
         --wsgi-file /opt/app/main.py &
 
 # Wait for uwsgi to bind its socket

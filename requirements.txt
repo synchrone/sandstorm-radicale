@@ -2,3 +2,4 @@ radicale
 webassets
 jsmin
 cssmin
+flask

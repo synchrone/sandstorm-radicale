@@ -1,31 +1,47 @@
+.ui-widget-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #aaaaaa;
+    opacity: .3;
+    z-index: 26;
+}
+
 #intSync {
     display: block;
-    background: url(../images/cloud.svg) no-repeat center;
+    background: url(../images/banner_cloud.svg) no-repeat center;
     background-size: 36px 36px;
 }
 
-.sandstorm-offer {
-    z-index: 26; /** higher than inf-it system **/
-}
-.sandstorm-offer .ui-icon{
-    height: 0px; /** No css for jQuery Dialog plugin, so won't show icons **/
-}
-.sandstorm-offer .ui-dialog-titlebar-close{
-    margin: 5px 0px;
+#intImport {
+    display: block;
+    background: url(../images/banner_import_export.svg) no-repeat center;
+    background-size: 36px 36px;
 }
 
-.sandstorm-offer .ui-dialog-content{
-    padding: 0px 15px;
+.infIt-dialog {
+    z-index: 27; /** higher than inf-it system **/
 }
-.sandstorm-offer .iframish{
+.infIt-dialog .ui-icon{
+    height: 0; /** No css for jQuery Dialog plugin, so won't show icons **/
+}
+.infIt-dialog .ui-dialog-titlebar-close{
+    margin: 5px 0;
+}
+
+.infIt-dialog .ui-dialog-content{
+    padding: 0 15px;
+}
+
+.infIt-dialog .iframish{
     color: #000;
     font-size: medium;
     font-family: monospace;
 }
 
-.sandstorm-offer iframe {
+.infIt-dialog iframe {
     height: 32px;
     width: 100%;
-    frameborder: 0;
-    border 1px solid #c0c0c0;
 }

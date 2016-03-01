@@ -1,7 +1,7 @@
 .idea
 .sandstorm/.vagrant
 env
-webassets_config/__pycache__/
+*/__pycache__/
 infcloud
 *nginx.conf*
 *.zip

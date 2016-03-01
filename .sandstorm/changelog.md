@@ -32,3 +32,8 @@
 # v8
 * Fixed .well-known support
 * Fixed an unauthenticated setup check support (issue #8)
+
+# v9
+* Import/Export feature
+* Sync and Import/Export icons changed
+* Sync and Import/Export dialog modal overlay fixed
