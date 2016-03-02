@@ -1512,6 +1512,7 @@ function netLoadResource(inputResource, inputHref, hrefMode, inputResourceIndex,
 						}
 						var displayvalue=resources.children().filterNsNode('displayname').text();
 						var headervalue=resources.children().filterNsNode('headervalue').text();
+						var syncTokenSupport=resources.children().filterNsNode('sync-token').length > 0;
 						var synctoken=resources.children().filterNsNode('sync-token').text();
 						var oldSyncToken='';
 						var tmp_dv=href.match(RegExp('.*/([^/]+)/$', 'i'));
@@ -1562,7 +1563,7 @@ function netLoadResource(inputResource, inputHref, hrefMode, inputResourceIndex,
 							var existingResource=globalResourceCalDAVList.getEventCollectionByUID(uidBase+href);
 							if(existingResource!=null)
 							{
-								if(existingResource.syncToken!=synctoken)
+								if(!syncTokenSupport || existingResource.syncToken!=synctoken)
 									someChanged=true;
 							}
 							else
@@ -1622,7 +1623,7 @@ function netLoadResource(inputResource, inputHref, hrefMode, inputResourceIndex,
 							var existingResource=globalResourceCalDAVList.getTodoCollectionByUID(uidBase+href);
 							if(syncRequired && existingResource!=null)
 							{
-								if(existingResource.syncToken!=synctoken)
+								if(!syncTokenSupport || existingResource.syncToken!=synctoken)
 									someChanged=true;
 							}
 							else
