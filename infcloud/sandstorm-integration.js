@@ -42,7 +42,8 @@ $(function(){
                 // iOS does unauthenticated requests to api endpoint during settings dialog credential check (?!)
                 // so we stub an anonymous response here with hardcoded DAV headers as per RFC4791, Section 5.1
                 unauthenticated: {options: {dav: ["1", "2", "3", "calendar-access", "addressbook", "extended-mkcol"]}},
-                petname: petname
+                petname: petname,
+                clipboardButton: 'right'
             };
 
             //separately requesting password to render in a separate iframe

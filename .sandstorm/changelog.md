@@ -37,3 +37,5 @@
 * Import/Export feature
 * Sync and Import/Export icons changed
 * Sync and Import/Export dialog modal overlay fixed
+* Refresh [issue (#12)](https://github.com/synchrone/sandstorm-radicale/issues/7) solved
+* Copy button inside credential fields' iframes
