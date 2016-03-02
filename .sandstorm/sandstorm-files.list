@@ -492,9 +492,6 @@ opt/app/infcloud/vcalendar.js
 opt/app/infcloud/vcalendar_rfc_regex.js
 opt/app/infcloud/vcard_rfc_regex.js
 opt/app/infcloud/vtodo.js
-opt/app/infcloud/webassets-external/2d58b8c65db5bd68e1f040c5b391bf8f_inf-it-integration.css
-opt/app/infcloud/webassets-external/ae061a0595d99c08fd412f4059b53971_jquery-ui-dialog-only.js
-opt/app/infcloud/webassets-external/f937d9d9cf456b0a80a0561afd298347_inf-it-integration.js
 opt/app/infcloud/webdav_protocol.js
 opt/app/main.py
 opt/app/radicale.config
