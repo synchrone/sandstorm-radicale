@@ -4,7 +4,7 @@ set -euo pipefail
 export DEBIAN_FRONTEND=noninteractive
 
 apt-get update
-apt-get install -y nginx uwsgi uwsgi-plugin-python3 python3-virtualenv
+apt-get install -y nginx uwsgi uwsgi-plugin-python3 virtualenv
 service nginx stop
 systemctl disable nginx
 
