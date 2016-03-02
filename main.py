@@ -1,4 +1,4 @@
-import pydevd
+# import pydevd
 import radicale
 from importapp import wsgi_app as importApp
 from radicale import config, Application as Radicale
