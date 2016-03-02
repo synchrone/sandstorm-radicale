@@ -1721,6 +1721,7 @@ function netLoadResource(inputResource, inputHref, hrefMode, inputResourceIndex,
 
 							var displayvalue=resources.children().filterNsNode('displayname').text();
 							var headervalue=resources.children().filterNsNode('headervalue').text();
+							var syncTokenSupport=resources.children().filterNsNode('sync-token').length > 0;
 							var synctoken=resources.children().filterNsNode('sync-token').text();
 							var oldSyncToken='';
 
@@ -1744,7 +1745,7 @@ function netLoadResource(inputResource, inputHref, hrefMode, inputResourceIndex,
 							var existingResource=globalResourceCardDAVList.getCollectionByUID(uidBase+href);
 							if(existingResource!=null)
 							{
-								if(existingResource.syncToken!=synctoken)
+								if(!syncTokenSupport || existingResource.syncToken!=synctoken)
 									someChanged=true;
 								if(typeof globalForceSyncURLArray!='undefined' && globalForceSyncURLArray.length>0 && globalForceSyncURLArray.indexOf(existingResource.uid)!=-1)
 								{
