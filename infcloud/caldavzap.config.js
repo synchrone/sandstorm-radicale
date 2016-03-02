@@ -6,7 +6,7 @@ var globalAccountSettings=[
         timeOut: 90000,
         lockTimeOut: 10000,
         checkContentType: true,
-        settingsAccount: true,
+        settingsAccount: false,
         delegation: true,
         hrefLabel: 'Current Grain',
         forceReadOnly: null,

@@ -275,6 +275,7 @@ opt/app/env/lib/python3.4/site-packages/pydevd_plugins/__pycache__/__init__.cpyt
 opt/app/env/lib/python3.4/site-packages/pydevd_plugins/__pycache__/django_debug.cpython-34.pyc
 opt/app/env/lib/python3.4/site-packages/pydevd_plugins/__pycache__/jinja2_debug.cpython-34.pyc
 opt/app/env/lib/python3.4/site-packages/radicale
+opt/app/env/lib/python3.4/site-packages/radicale/__init__.py
 opt/app/env/lib/python3.4/site-packages/radicale/__pycache__/__init__.cpython-34.pyc
 opt/app/env/lib/python3.4/site-packages/radicale/__pycache__/config.cpython-34.pyc
 opt/app/env/lib/python3.4/site-packages/radicale/__pycache__/ical.cpython-34.pyc
@@ -290,6 +291,8 @@ opt/app/env/lib/python3.4/site-packages/radicale/rights/__pycache__/regex.cpytho
 opt/app/env/lib/python3.4/site-packages/radicale/storage
 opt/app/env/lib/python3.4/site-packages/radicale/storage/__pycache__/__init__.cpython-34.pyc
 opt/app/env/lib/python3.4/site-packages/radicale/storage/__pycache__/filesystem.cpython-34.pyc
+opt/app/env/lib/python3.4/site-packages/radicale/storage/filesystem.py
+opt/app/env/lib/python3.4/site-packages/radicale/xmlutils.py
 opt/app/env/lib/python3.4/site-packages/werkzeug
 opt/app/env/lib/python3.4/site-packages/werkzeug/__pycache__/__init__.cpython-34.pyc
 opt/app/env/lib/python3.4/site-packages/werkzeug/__pycache__/_compat.cpython-34.pyc
@@ -334,6 +337,7 @@ opt/app/infcloud/css/fullcalendar.css
 opt/app/infcloud/css/hideresources.css
 opt/app/infcloud/css/jquery-ui.custom.css
 opt/app/infcloud/css/jquery.tagsinput.css
+opt/app/infcloud/css/sandstorm-integration.css
 opt/app/infcloud/css/spectrum.custom.css
 opt/app/infcloud/data_process.js
 opt/app/infcloud/fonts/Roboto-Bold-webfont.eot
@@ -470,6 +474,7 @@ opt/app/infcloud/interface.js
 opt/app/infcloud/lib/fullcalendar.js
 opt/app/infcloud/lib/jquery-2.1.4.min.js
 opt/app/infcloud/lib/jquery-ui-1.11.4.custom.js
+opt/app/infcloud/lib/jquery-ui-dialog-only.js
 opt/app/infcloud/lib/jquery.autosize.js
 opt/app/infcloud/lib/jquery.browser.js
 opt/app/infcloud/lib/jquery.placeholder-1.1.9.js
@@ -481,6 +486,7 @@ opt/app/infcloud/lib/spectrum.js
 opt/app/infcloud/localization.js
 opt/app/infcloud/main.js
 opt/app/infcloud/resource.js
+opt/app/infcloud/sandstorm-integration.js
 opt/app/infcloud/timezones.js
 opt/app/infcloud/vcalendar.js
 opt/app/infcloud/vcalendar_rfc_regex.js
@@ -572,6 +578,7 @@ usr/lib/python3.4/concurrent/futures/__pycache__/__init__.cpython-34.pyc
 usr/lib/python3.4/concurrent/futures/__pycache__/_base.cpython-34.pyc
 usr/lib/python3.4/concurrent/futures/__pycache__/process.cpython-34.pyc
 usr/lib/python3.4/concurrent/futures/__pycache__/thread.cpython-34.pyc
+usr/lib/python3.4/contextlib.py
 usr/lib/python3.4/ctypes
 usr/lib/python3.4/ctypes/__pycache__/__init__.cpython-34.pyc
 usr/lib/python3.4/ctypes/__pycache__/_endian.cpython-34.pyc
@@ -637,6 +644,7 @@ usr/lib/python3.4/multiprocessing/__pycache__/context.cpython-34.pyc
 usr/lib/python3.4/multiprocessing/__pycache__/process.cpython-34.pyc
 usr/lib/python3.4/multiprocessing/__pycache__/reduction.cpython-34.pyc
 usr/lib/python3.4/multiprocessing/__pycache__/util.cpython-34.pyc
+usr/lib/python3.4/os.py
 usr/lib/python3.4/plat-x86_64-linux-gnu
 usr/lib/python3.4/sitecustomize.py
 usr/lib/python3.4/traceback.py
