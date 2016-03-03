@@ -2217,8 +2217,7 @@ function globalMainCardDAV()
 		var isResourceVisible=$('#ResourceCardDAVList').width()>1;
 		var col1=isResourceVisible? 0:224;
 		var col2=isResourceVisible? 0:225;
-
-		if(isIntegrated)
+		if(isIntegrated || globalEnableRefresh)
 		{
 			col2+=50;
 		}
