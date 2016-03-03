@@ -134,8 +134,19 @@ $(function(){
         btn.appendTo('.integration_d');
     }
 
+    function setupGrainNameUpdater(){
+        window.addEventListener("message", function(event) {
+            if(event.data.rpcId == 'sandstorm#grainNameUpdate' && event.data.grainName) {
+                var safeName = event.data.grainName.replace().trim() || 'Unnamed Grain';
+                netSaveProperty($.extend({url: ''}, globalAccountSettings[0]), 'DAV:', 'displayname', safeName);
+            }
+        });
+        window.parent.postMessage({subscribeToGrainNameUpdates:true}, "*");
+    }
+
     setupSync();
     setupImport();
+    setupGrainNameUpdater();
 });
 
 //disable Backspace navigate back, which behaves poorly inside Sandstorm's iframe
