@@ -3,11 +3,6 @@ user: .*
 collection: /
 permission: r
 
-[owner]
-user: owner
-collection: ^owner(/.+)?$
-permission: rw
-
 [readonly]
 user: readonly
 collection: ^owner(/.+)?$
