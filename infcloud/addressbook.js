@@ -736,6 +736,8 @@ function AddressbookList()
 			// parsed (contentline_parse) = [1]->"group.", [2]->"name", [3]->";param;param", [4]->"value"
 			parsed=vcard_element[0].match(vCard.pre['contentline_parse']);
 			inputContact.uidattr=vcardUnescapeValue(parsed[4]);
+		}else if(inputContact.etag){
+			inputContact.uidattr=inputContact.etag; //etags in multistatus response are per-contact object, so they fly as UID in the absence of such
 		}
 		else	// UID attr is REQUIRED
 			return false;	// invalud vcard
