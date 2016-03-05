@@ -39,3 +39,9 @@
 * Sync and Import/Export dialog modal overlay fixed
 * Refresh [issue (#12)](https://github.com/synchrone/sandstorm-radicale/issues/7) solved
 * Copy button inside credential fields' iframes
+
+# v10
+* Fixing CardDavMATE UI bug
+* Fixing issue #15
+* Demo-mode is now calendar, not contacts
+* Not storing app settings inside DAV, since they're hardcoded anyway
