@@ -26,13 +26,13 @@ const pkgdef :Spk.PackageDefinition = (
     # identify versions of your app in documentation and marketing.
 
     actions = [
-      ( title = (defaultText = "New Addressbook"),
-        nounPhrase = (defaultText = "addressbook"),
-        command = .carddavCommand,
-      ),
       ( title = (defaultText = "New Calendar"),
         nounPhrase = (defaultText = "calendar"),
         command = .caldavCommand,
+      ),
+      ( title = (defaultText = "New Addressbook"),
+        nounPhrase = (defaultText = "addressbook"),
+        command = .carddavCommand,
       ),
     ],
 
