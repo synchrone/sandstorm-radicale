@@ -46,7 +46,7 @@ def select_collection(path):
 def handle_import(collection_to_import):
     importFile = request.files['file']
     assert isinstance(importFile, FileStorage)
-    fileContents = importFile.stream.getvalue().decode('utf-8')
+    fileContents = importFile.stream.read().decode('utf-8')
 
     items_in_collection = len(collection_to_import.items)
     collection_to_import.append(None, fileContents)
