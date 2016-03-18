@@ -19,9 +19,9 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "Radicale"),
 
-    appVersion = 10,  # Increment this for every release.
+    appVersion = 11,  # Increment this for every release.
 
-    appMarketingVersion = (defaultText = "1.1.1+v10"),
+    appMarketingVersion = (defaultText = "1.1.1+v11"),
     # Human-readable representation of appVersion. Should match the way you
     # identify versions of your app in documentation and marketing.
 
@@ -125,6 +125,9 @@ const pkgdef :Spk.PackageDefinition = (
 
   alwaysInclude = [
     "opt/app/env",
+    "opt/app/importapp",
+    "opt/app/webassets_config",
+    "opt/app/infcloud",
     "usr/lib/python3.4", # pull in the whole Python 3 runtime
     "usr/lib/python3", # pull in any Debian pure-Python packages
   ],
