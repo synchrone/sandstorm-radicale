@@ -1,0 +1,53 @@
+diff --git a/radicale/storage/filesystem.py b/radicale/storage/filesystem.py
+index deeba20..cfd89a9 100644
+--- a/radicale/storage/filesystem.py
++++ b/radicale/storage/filesystem.py
+@@ -28,6 +28,7 @@ import json
+ import time
+ import sys
+ from contextlib import contextmanager
++from atomicwrites import AtomicWriter
+ 
+ from .. import config, ical, log, pathutils
+ 
+@@ -61,6 +62,15 @@ def open(path, mode="r"):
+ # pylint: enable=W0622
+ 
+ 
++class _EncodedAtomicWriter(AtomicWriter):
++    def __init__(self, path, encoding, mode="w", overwrite=True):
++        self._encoding = encoding
++        super().__init__(path, mode, overwrite=True)
++
++    def get_fileobject(self, **kwargs):
++        return super().get_fileobject(encoding=self._encoding, **kwargs)
++
++
+ class Collection(ical.Collection):
+     """Collection stored in a flat ical file."""
+     @property
+@@ -78,9 +88,16 @@ class Collection(ical.Collection):
+         if not os.path.exists(os.path.dirname(self._filesystem_path)):
+             os.makedirs(os.path.dirname(self._filesystem_path))
+ 
++
++    @contextmanager
++    def _atomic_write(self, path, mode="w"):
++        with _EncodedAtomicWriter(
++                path, FILESYSTEM_ENCODING, mode).open() as fd:
++            yield fd
++
+     def save(self, text):
+         self._create_dirs()
+-        with open(self._filesystem_path, "w") as fd:
++        with self._atomic_write(self._filesystem_path, "w+") as fd:
+             fd.write(text)
+ 
+     def delete(self):
+@@ -140,5 +157,5 @@ class Collection(ical.Collection):
+         # On exit
+         self._create_dirs()
+         if old_properties != properties:
+-            with open(self._props_path, "w") as prop_file:
++            with self._atomic_write(self._props_path, "w") as prop_file:
+                 json.dump(properties, prop_file)

@@ -1,5 +1,6 @@
-radicale
+radicale==1.1.1
 webassets
 jsmin
 cssmin
 flask
+atomicwrites==1.1.0
