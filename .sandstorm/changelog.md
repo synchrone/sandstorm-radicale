@@ -45,3 +45,10 @@
 * Fixing issue #15
 * Demo-mode is now calendar, not contacts
 * Not storing app settings inside DAV, since they're hardcoded anyway
+
+# v11
+* Fixing issue #16
+* Fixing file-list packaging issues
+
+# v12
+* Fixing issue #21
