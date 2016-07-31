@@ -7,7 +7,9 @@ from webassets.loaders import PythonLoader
 parser = argparse.ArgumentParser(description='Build assets')
 parser.add_argument('--loglevel', dest='loglevel', default='DEBUG', help='DEBUG, INFO, WARN, ERROR or CRITICAL')
 parser.add_argument('--debug', action='store_true', default=False, help='debug resource pipelining')
-parser.add_argument('--reference', action='store_true', default=True, help='Reference resources built from index.html')
+parser.add_argument('--reference', action='store_true', default=True, help='Reference resources built from --reference-file')
+parser.add_argument('--reference-tmpl', dest='reference_tmpl', default='infcloud/index.html.tmpl', help='The html template to patch with resource links')
+parser.add_argument('--reference-output', dest='reference_output', default='infcloud/index.html', help='The html file to output')
 parser.add_argument('command', metavar='command', default='build', help='build, watch or clean')
 args = parser.parse_args()
 
@@ -32,8 +34,7 @@ if args.command != 'build':
     cmdenv.invoke(args.command, {})
 
 if args.reference:
-    index_filename = 'infcloud/index.html'
-    index = open(index_filename+'.tmpl', 'r')
+    index = open(args.reference_tmpl, 'r')
     index_contents = index.read()
     index.close()
 
@@ -43,6 +44,6 @@ if args.reference:
         .replace('<!--JS_ASSETS-->', "\n".join(css_prepped))\
         .replace('<!--CSS_ASSETS-->', "\n".join(js_prepped))
 
-    patched = open('infcloud/index.html', 'w+')
+    patched = open(args.reference_output ,'w+')
     patched.write(index_contents)
     patched.close()
