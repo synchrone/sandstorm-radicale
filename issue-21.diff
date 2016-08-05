@@ -1,5 +1,5 @@
 diff --git a/radicale/storage/filesystem.py b/radicale/storage/filesystem.py
-index deeba20..cfd89a9 100644
+index deeba20..32a26a7 100644
 --- a/radicale/storage/filesystem.py
 +++ b/radicale/storage/filesystem.py
 @@ -28,6 +28,7 @@ import json
@@ -10,44 +10,41 @@ index deeba20..cfd89a9 100644
  
  from .. import config, ical, log, pathutils
  
-@@ -61,6 +62,15 @@ def open(path, mode="r"):
- # pylint: enable=W0622
+@@ -42,6 +43,14 @@ except:
+     GIT_REPOSITORY = None
  
  
 +class _EncodedAtomicWriter(AtomicWriter):
 +    def __init__(self, path, encoding, mode="w", overwrite=True):
 +        self._encoding = encoding
-+        super().__init__(path, mode, overwrite=True)
++        super().__init__(path, mode, overwrite)
 +
 +    def get_fileobject(self, **kwargs):
 +        return super().get_fileobject(encoding=self._encoding, **kwargs)
 +
-+
+ # This function overrides the builtin ``open`` function for this module
+ # pylint: disable=W0622
+ @contextmanager
+@@ -49,8 +58,12 @@ def open(path, mode="r"):
+     """Open a file at ``path`` with encoding set in the configuration."""
+     # On enter
+     abs_path = os.path.join(FOLDER, path.replace("/", os.sep))
+-    with codecs.open(abs_path, mode, config.get("encoding", "stock")) as fd:
+-        yield fd
++    if mode == "w":
++        with _EncodedAtomicWriter(abs_path, config.get("encoding", "stock"), mode).open() as fd:
++            yield fd
++    else:
++        with codecs.open(abs_path, mode, config.get("encoding", "stock")) as fd:
++            yield fd
+     # On exit
+     if GIT_REPOSITORY and mode == "w":
+         path = os.path.relpath(abs_path, FOLDER)
+@@ -60,7 +73,6 @@ def open(path, mode="r"):
+             path.encode("utf-8"), committer=committer.encode("utf-8"))
+ # pylint: enable=W0622
+ 
+-
  class Collection(ical.Collection):
      """Collection stored in a flat ical file."""
      @property
-@@ -78,9 +88,16 @@ class Collection(ical.Collection):
-         if not os.path.exists(os.path.dirname(self._filesystem_path)):
-             os.makedirs(os.path.dirname(self._filesystem_path))
- 
-+
-+    @contextmanager
-+    def _atomic_write(self, path, mode="w"):
-+        with _EncodedAtomicWriter(
-+                path, FILESYSTEM_ENCODING, mode).open() as fd:
-+            yield fd
-+
-     def save(self, text):
-         self._create_dirs()
--        with open(self._filesystem_path, "w") as fd:
-+        with self._atomic_write(self._filesystem_path, "w+") as fd:
-             fd.write(text)
- 
-     def delete(self):
-@@ -140,5 +157,5 @@ class Collection(ical.Collection):
-         # On exit
-         self._create_dirs()
-         if old_properties != properties:
--            with open(self._props_path, "w") as prop_file:
-+            with self._atomic_write(self._props_path, "w") as prop_file:
-                 json.dump(properties, prop_file)
