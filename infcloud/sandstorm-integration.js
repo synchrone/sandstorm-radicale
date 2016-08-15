@@ -12,8 +12,7 @@ $(function(){
             '<div class="iframish">sandstorm</div>'+
             '<p>Password:</p>'+
             '<iframe class="password" frameborder="0" allowtransparency="true" seamless />'+
-            '<p><a href="https://help.hover.com/hc/en-us/articles/217282047" target="_blank">How to set up iOS/Android to sync?</a></p>'+
-            (isCalDav ? '<p><a href="https://help.hover.com/hc/en-us/articles/217282057" target="_blank">How to set up Mozilla Thunderbird to sync?</a></p>' : '')+
+            '<p><a href="http://radicale.org/user_documentation/#idstarting-the-client" target="_blank">How to set up my device to synchronize?</a></p>'+
         '</div>');
 
         dlg.dialog({
