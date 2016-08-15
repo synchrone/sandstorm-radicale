@@ -37,7 +37,7 @@ http {
         # radicale setup
         location /radicale {
             if ($http_x_sandstorm_permissions ~* (readonly)) { set $user $1; }
-            if ($http_x_sandstorm_permissions ~* (readwrite)) { set $user $1; }
+            if ($http_x_sandstorm_permissions ~* (owner)) { set $user $1; }
 
             uwsgi_pass unix:///var/run/uwsgi.sock;
             include /etc/nginx/uwsgi_params;

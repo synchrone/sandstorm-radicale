@@ -19,9 +19,9 @@ const pkgdef :Spk.PackageDefinition = (
 
     appTitle = (defaultText = "Radicale"),
 
-    appVersion = 13,  # Increment this for every release.
+    appVersion = 14,  # Increment this for every release.
 
-    appMarketingVersion = (defaultText = "1.1.1+v13"),
+    appMarketingVersion = (defaultText = "1.1.1+v14"),
     # Human-readable representation of appVersion. Should match the way you
     # identify versions of your app in documentation and marketing.
 
@@ -143,12 +143,12 @@ const pkgdef :Spk.PackageDefinition = (
         (
           name = "readonly",
           title = (defaultText = "readonly"),
-          description = (defaultText = "Readonly access"),
+          description = (defaultText = "Read-only access"),
         ),
         (
-          name = "readwrite",
-          title = (defaultText = "readwrite"),
-          description = (defaultText = "Readwrite access"),
+          name = "owner",
+          title = (defaultText = "owner"),
+          description = (defaultText = "Full access"),
         ),
       ],
       roles = [
@@ -159,10 +159,10 @@ const pkgdef :Spk.PackageDefinition = (
           description = (defaultText = "viewers may view what other users have stored"),
         ),
         (
-          title = (defaultText = "editor"),
+          title = (defaultText = "owner"),
           permissions  = [false, true],
-          verbPhrase = (defaultText = "can write"),
-          description = (defaultText = "editors can write"),
+          verbPhrase = (defaultText = "has full access"),
+          description = (defaultText = "has full access"),
         ),
       ],
     )
