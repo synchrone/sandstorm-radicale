@@ -52,3 +52,10 @@
 
 # v12
 * Fixing issue #21
+
+# v13
+* Hotfixing atomic writes patch backport due to mis-backported issue #21 patch in v12
+
+# v14
+* Finally fixing OS X sync set up in Manual mode.
+* Fixing broken sync how-to URLs
