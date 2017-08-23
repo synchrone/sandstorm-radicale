@@ -12,7 +12,7 @@ $(function(){
             '<div class="iframish">sandstorm</div>'+
             '<p>Password:</p>'+
             '<iframe class="password" frameborder="0" allowtransparency="true" seamless />'+
-            '<p><a href="http://radicale.org/user_documentation/#idstarting-the-client" target="_blank">How to set up my device to synchronize?</a></p>'+
+            '<p><a href="http://radicale.org/clients/" target="_blank">How to set up my device to synchronize?</a></p>'+
         '</div>');
 
         dlg.dialog({
